@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate Us Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('https://media.istockphoto.com/id/813128966/photo/hand-putting-coins-in-glass-jar-for-giving-and-donation-concept.jpg?s=612x612&w=0&k=20&c=n6JuwHg5qL5usrI45PCsvjXjX743Mk0Ov4pW2GtO8CA=');
+      background-size: cover;
+     background-position: center;
+    
+    }
+    .donate-form {
+        max-width: 500px;
+        width: 100%;
+        padding: 20px;
+        border: 3px solid  ;
+        border-radius: 10px;
+        background-color:#fff;
+    }
+    .form-group {
+        margin-bottom: 15px;
+        color: #4CAF50;
+        
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+    input, select {
+        width: 100%;
+        padding: 8px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    .submit-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        border: 1px solid black;
+    }
+    .submit-btn:hover {
+        background-color:white;
+        color:#4CAF50  ;
+    }
+ .heading{
+    text-align: center;
+    color: #45a049;
+  
+ }
+ .img{
+    width: 200x;
+    height: 300px;
+    margin-right: 0px;
+ }
+</style>
+</head>
+<body>
+ 
+    <form class="donate-form">
+        <div class="heading">
+           <h2>Donate Us</h2> 
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+        </div>
+        <div class="form-group">
+            <label for="paymentMethod">Pay Through:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="UPI">UPI</option>
+                <option value="NetBanking">Net Banking</option>
+                <option value="DebitCard">Debit Card</option>
+            </select>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</body>
+</html>

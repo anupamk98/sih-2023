@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color:#A8DF8E;
+            color:black;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .achievement {
+            margin: 10px 0;
+        }
+
+        .btn {
+            background-color: #A8DF8E;
+            color:black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: #A8DF8E;
+        }
+
+        footer {
+            background-color: #A8DF8E;
+            color:black;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <img class="sfk" src="favicon.ico" alt="" />
+        <ul class="top-bar">
+          <li class="website">SAFAYAKS</li>
+          <li class="moto">Cleaner World Better World</li>
+        </ul>
+        <ul class="nav-bar">
+          <li class="homeb"><a href="index.html">HOME</a></li>
+          <li class="serviceb"><a href="service.html">SERVICES</a></li>
+          <li class="introb"><a href="joinus.html">JOIN US</a></li>
+          <li class="suppb"><a href="support.html">SUPPORT</a></li>
+          <li class="clients"><a style="color:blue;" href="community.html">COMMUNITY</a></li>
+        </ul>
+        <a class="img1" href="accounts.html"
+          ><img class="img1" src="icons8-account-50.png" alt=""
+        /></a>
+      </div>
+    <section id="whatsapp-section">
+        <h2>Join Our WhatsApp Channel</h2>
+        <p>Stay updated with the latest news and events like clean up drives , awarness campaigns etc by joining our WhatsApp channel.</p>
+        <a href="https://whatsapp.com/channel/0029Va9wfwpDp2Q1gML1EQ1r" target="_blank" class="btn">Join Now</a>
+    </section>
+
+    <section id="achievements-section">
+        <h2>Our Achievements</h2>
+        <div class="achievement">
+            <h3>Clean-Up Drives Conducted</h3>
+            <p>Total Drives: <span id="driveCounter">0</span></p>
+            <button onclick="incrementCounter('driveCounter')">+1</button>
+        </div>
+        <div class="achievement">
+            <h3>Garbage Collected</h3>
+            <p>Total Amount: <span id="garbageCounter">0</span> kg</p>
+            <button onclick="incrementCounter('garbageCounter')">+1 kg</button>
+        </div>
+        <div class="achievement">
+            <h3>Garbage Recycled</h3>
+            <p>Total Amount: <span id="rCounter">0</span> kg</p>
+            <button onclick="incrementCounter('rCounter')">+1 kg</button>
+        </div>
+        <div class="achievement">
+            <h3>Active Community Members</h3>
+            <p>Total Members: <span id="memberCounter">0</span></p>
+            <button onclick="incrementCounter('memberCounter')">+1</button>
+        </div>
+        <div class="achievement">
+            <h3>Awareness Campaigns Conducted at:</h3>
+            <ul id="campaignList">
+            </ul>
+            <input type="text" id="campaignInput" placeholder="Add a school or college">
+            <button onclick="addCampaign()">Add</button>
+        </div>
+        <div class="achievement">
+            <h3>NGOs Affiliated:</h3>
+            <ul id="ngoList">
+            </ul>
+            <input type="text" id="ngoInput" placeholder="Add an affiliated NGO">
+            <button onclick="addNGO()">Add</button>
+        </div>
+    </section>
+    <div class="sm">©️ SAFAYAKS. All rights reserved.
+        <div class="link">
+            <a href="#" class="tag">CLIENT&PARTNERS</a>
+            <a href="#" class="tag">PRIVACY POLICY</a>
+            <a href="#" class="tag">ABOUT US</a>
+        </div>
+    <script>
+        function incrementCounter(counterId) {
+            const counter = document.getElementById(counterId);
+            const currentCount = parseInt(counter.textContent, 10);
+            counter.textContent = currentCount + 1;
+        }
+
+        function addCampaign() {
+            const campaignInput = document.getElementById("campaignInput");
+            const campaignName = campaignInput.value.trim();
+
+            if (campaignName !== "") {
+                const campaignList = document.getElementById("campaignList");
+                const listItem = document.createElement("li");
+                listItem.textContent = campaignName;
+                campaignList.appendChild(listItem);
+                campaignInput.value = "";
+            }
+        }
+
+        function addNGO() {
+            const ngoInput = document.getElementById("ngoInput");
+            const ngoName = ngoInput.value.trim();
+
+            if (ngoName !== "") {
+                const ngoList = document.getElementById("ngoList");
+                const listItem = document.createElement("li");
+                listItem.textContent = ngoName;
+                ngoList.appendChild(listItem);
+                ngoInput.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
